@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "GestureOS",
+  "version": "0.1.0",
+  "identifier": "com.gestureos.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "GestureOS",
+        "width": 520,
+        "height": 680,
+        "minWidth": 420,
+        "minHeight": 520,
+        "resizable": true,
+        "center": true,
+        "visible": true,
+        "backgroundColor": "#0b0c0f"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: data:; style-src 'self'; script-src 'self' 'wasm-unsafe-eval'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ]
+  }
+}

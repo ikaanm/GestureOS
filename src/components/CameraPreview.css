@@ -1,0 +1,22 @@
+.camera-card{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 180px;align-items:center;gap:10px 14px;margin-top:13px;padding:12px;border:1px solid #24242b;border-radius:9px;background:#101115}
+.camera-copy{min-width:0}
+.camera-heading{display:flex;align-items:center;gap:7px;color:#a995f2;font:9px ui-monospace,monospace;letter-spacing:.12em}
+.camera-copy p{margin:7px 0 9px;color:#777681;font-size:10px}
+.camera-controls{display:flex;gap:7px}
+.camera-button{display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:6px 8px;border:1px solid #33323a;border-radius:6px;background:#17171d;color:#c5c3cf;font:10px 'Segoe UI',sans-serif;cursor:pointer}
+.camera-button:hover:not(:disabled){border-color:#65529d;color:#e6e1ff}
+.camera-button.primary{border-color:#65529d;background:#211c35;color:#d0c4ff}
+.camera-button:disabled{opacity:.45;cursor:default}
+.camera-frame{position:relative;flex:0 0 180px;width:180px;aspect-ratio:16/9;overflow:hidden;border:1px solid #303038;border-radius:7px;background:#090a0d}
+.camera-frame video{display:none;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+.camera-frame.active video{display:block}
+.hand-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hand-status-live{color:#78dca7}
+.gesture-dashboard{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:5px 12px;padding-top:8px;border-top:1px solid #25252c;color:#85828f;font:9px ui-monospace,monospace}
+.gesture-current{display:flex;align-items:center;gap:9px;min-width:0}.gesture-current strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#d4d0e1;font-size:10px}.gesture-metrics{display:flex;gap:10px;justify-content:flex-end}.gesture-metrics b{color:#c5b4ff;font-weight:600}.gesture-history{grid-column:1/-1;display:flex;align-items:center;gap:7px;overflow:hidden;white-space:nowrap}.gesture-history>span{color:#696875;font-size:8px;letter-spacing:.1em}.gesture-history>b{padding:3px 5px;border:1px solid #35313e;border-radius:4px;color:#b7a4ff;font-size:8px;font-weight:500}.gesture-history>i{font-style:normal}.gesture-error{grid-column:1/-1;color:#ffacb1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.performance-line{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:3px 10px;color:#777681;font-size:8px}.performance-line b{color:#bdb7ce;font-weight:600}
+.volume-control-hint{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:4px 9px;color:#85828f;font-size:8px}.volume-control-hint>span:first-child{color:#696875;letter-spacing:.1em}.volume-control-hint>b{color:#78dca7;font-weight:600}.volume-control-hint>i{color:#ffacb1;font-style:normal}.volume-control-hint input[type=range]{width:76px;height:10px;accent-color:#a995f2;cursor:pointer}
+.camera-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#75717f;font-size:9px}
+.camera-error{position:absolute;left:12px;right:12px;top:calc(100% + 5px);z-index:2;display:flex;align-items:flex-start;gap:6px;padding:8px 9px;border:1px solid #563238;border-radius:7px;background:#2b1b20;color:#ffb2b8;font-size:10px;line-height:1.4}
+.camera-error svg{flex:0 0 auto;margin-top:1px}
+@media(max-width:520px){.app-shell{padding-right:20px;padding-left:20px}.camera-card{grid-template-columns:minmax(0,1fr) 145px;gap:8px;padding:10px}.camera-frame{flex-basis:145px;width:145px}.camera-controls{gap:5px}.camera-button{padding:6px}.gesture-dashboard{gap:5px}.gesture-current{gap:5px}.gesture-metrics{gap:5px}}
